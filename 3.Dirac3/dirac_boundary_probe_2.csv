@@ -1,0 +1,2 @@
+attempted,cost_s,label,m,num_samples,relaxation_schedule,status,wall_clock_s
+True,12,"sparse, 1 sample, schedule=4 (max valid)",150,1,4,COMPLETED,18.49

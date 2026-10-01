@@ -1,0 +1,6 @@
+attempted,cost_s,n,status,wall_clock_s
+True,1,10,COMPLETED,7.68
+True,1,20,COMPLETED,7.63
+True,1,40,COMPLETED,7.68
+True,2,80,COMPLETED,13.1
+True,,160,"error: 400 Client Error: Bad Request for url: https://api.qci-prod.com/optimization/v1/jobs with response body: {""message"":""Number of variables '160' in problem is greater than the free-tier device limit '100' for polynomial with degree '2'""}",

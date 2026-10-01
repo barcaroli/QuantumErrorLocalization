@@ -1,0 +1,37 @@
+List of explicit edits
+N.;Edit;Gen. var.;from edits
+1;ENROLL (4) EDULEV (1-9) ;;  
+2;ENROLL (4) DEGREE (1-2) ;;  
+3;DEGREE (2) DEGLEV (1-8) ;;  
+4;DEGREE (2) DEGCTY (1-2) ;;  
+5;DEGREE (2) FIELD (0-10) ;;  
+6;ENROLL (1-3) EDULEV ( ) ;;  
+7;ENROLL (1-3) DEGREE ( ) ;;  
+8;DEGREE (1, ) DEGLEV ( ) ;;  
+9;DEGREE (1, ) DEGCTY ( ) ;;  
+10;DEGREE (1, ) FIELD ( ) ;;  
+11;EDULEV (8-9) AGE (0-14) ;;  
+12;DEGLEV (1-8) AGE (0-14) ;;  
+13;DEGLEV (4) DEGCTY (1) FIELD (5) ;;  
+
+List of implicit edits with edits generator
+N.;Edit;Gen. var.;from edits
+14;EDULEV ( ) DEGREE (1-2) ;ENROLL; 6 2  
+15;EDULEV (1-9) DEGREE ( ) ;ENROLL; 7 1  
+16;ENROLL (4) DEGLEV ( ) ;DEGREE; 8 2  
+17;EDULEV ( ) DEGLEV ( ) ;DEGREE; 8 14  
+18;ENROLL (4) DEGCTY ( ) ;DEGREE; 9 2  
+19;EDULEV ( ) DEGCTY ( ) ;DEGREE; 9 14  
+20;ENROLL (4) FIELD ( ) ;DEGREE; 10 2  
+21;EDULEV ( ) FIELD ( ) ;DEGREE; 10 14  
+22;DEGLEV ( ) DEGCTY (1-2) ;DEGREE; 8 4  
+23;DEGLEV ( ) FIELD (0-10) ;DEGREE; 8 5  
+24;DEGLEV (1-8) DEGCTY ( ) ;DEGREE; 9 3  
+25;DEGCTY ( ) FIELD (0-10) ;DEGREE; 9 5  
+26;DEGLEV (1-8) FIELD ( ) ;DEGREE; 10 3  
+27;DEGCTY (1-2) FIELD ( ) ;DEGREE; 10 4  
+28;DEGREE (1, ) AGE (0-14) ;DEGLEV; 12 8  
+29;ENROLL (4) AGE (0-14) ;DEGLEV; 12 16  
+30;EDULEV ( ) AGE (0-14) ;DEGLEV; 12 17  
+31;DEGCTY (1-2) AGE (0-14) ;DEGLEV; 12 22  
+32;FIELD (0-10) AGE (0-14) ;DEGLEV; 12 23  

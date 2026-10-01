@@ -1,0 +1,6 @@
+# Packages needed by ibm_qaoa_solver.py (versions the project was last tested with)
+qiskit==2.5.2
+qiskit-aer==0.17.2
+qiskit-ibm-runtime==0.49.0
+scipy==1.17.1
+numpy==2.4.6

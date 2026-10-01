@@ -1,0 +1,5 @@
+# Packages needed by dirac_solver.py (versions the project was last tested with)
+qci-client==5.0.2
+dwave-ocean-sdk==7.0.0
+numpy==1.26.4
+scipy==1.17.1

@@ -1,0 +1,13 @@
+Processed 11 records, 9 needed at least one correction (percentages relative to 9). Mode: DIRAC-3 CLOUD.
+
+LIST OF IMPUTATIONS PER RECORD (DIRAC-3 CLOUD)
+N_ERRATO  IMPUTAZIONE  N_VARIABILI  VARIABILI
+1         R            4            DEGLEV DEGCTY FIELD AGE
+2         R            2            ENROLL DEGREE
+3         R            1            DEGLEV
+4         R            2            ENROLL DEGREE
+5         R            1            EDULEV
+6         R            1            EDULEV
+7         R            1            AGE
+8         R            1            FIELD
+9         R            4            ENROLL DEGREE DEGCTY AGE

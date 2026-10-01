@@ -1,0 +1,91 @@
+* =====================================================================
+* CONCORD/SCIA -- Education chain subset + degree-3 test rule
+* FH_example benchmark, extended for quantum-computing degree
+* impact analysis (IBM/D-Wave/Dirac-3)
+*
+* Variables (7): ENROLL, EDULEV, DEGREE, DEGLEV, DEGCTY, FIELD (original
+* 6, unchanged) + AGE (new).
+*
+* Rules (13 REGOLE lines): the original 10 (5 logical skip-logic rules)
+* + 3 new incompatibility rules:
+*   A: AGE(00-14) EDULEV(8,9)          -- degree 2
+*   B: AGE(00-14) DEGLEV(1-8)          -- degree 2
+*   C: DEGCTY(1) FIELD(5) DEGLEV(4)    -- degree 3, genuinely
+*      irreducible (no pair of these 3 conditions alone is implausible;
+*      only the joint triple is -- field-of-specialisation code 5 exists
+*      only at technical-diploma level in the FH_example education system, but the
+*      same field+level combination is plausible if the degree was
+*      obtained abroad, DEGCTY=2)
+*
+* IMPORTANT, VERIFIED INTERACTION: rule B combines with the pre-existing
+* V3_nonblank rule (DEGREE!=2 -> DEGLEV filled) to imply "AGE<15 ->
+* DEGREE must equal 2 exactly (not blank, not 1)" -- because DEGREE in
+* {1,blank} would otherwise require DEGLEV filled (V3_nonblank), which B
+* forbids under 15. This is a logically valid consequence, not a bug,
+* but it means records like a never-enrolled child (ENROLL=4, DEGREE
+* correctly blank per V2) now require touching more fields to become
+* fully consistent than in the simpler 6-variable version of this
+* example (see TESTDATA_README.txt, record R2). Kept as-is deliberately
+* (verified with the project's own resolution engine, no contradiction).
+*
+* NOTE: ENROLL and AGE are mandatory (no blank) in this subset.
+* =====================================================================
+
+===VARDOM_START===
+ENROLL0001100010004
+EDULEV0002100010009B   B   
+DEGREE0003100010002B   B   
+DEGLEV0004100010008B   B   
+DEGCTY0005100010002B   B   
+FIELD 0006200000010B   B   
+AGE   0008200000098
+===VARDOM_END===
+
+===REGOLE_START===
+* ===== BLANK RULES =====
+ENROLL(4) EDULEV(1-9)
+ENROLL(4) DEGREE(1-2)
+DEGREE(2) DEGLEV(1-8)
+DEGREE(2) DEGCTY(1-2)
+DEGREE(2) FIELD(00-10)
+* ===== NON-BLANK RULES =====
+ENROLL<4) EDULEV<1-9)
+ENROLL<4) DEGREE<1-2)
+DEGREE<2) DEGLEV<1-8)
+DEGREE<2) DEGCTY<1-2)
+DEGREE<2) FIELD<00-10)
+* ===== INCOMPATIBILITY RULES =====
+* A: someone under 15 should not show a higher-education EDULEV code
+AGE(00-14) EDULEV(8,9)
+* B: someone under 15 should not have any degree level recorded
+AGE(00-14) DEGLEV(1-8)
+* C: field-of-specialisation code 5 exists only at technical-diploma
+* level in the FH_example education system (DEGCTY=1); the same field+level combo
+* is plausible if the degree was obtained abroad (DEGCTY=2) -- a
+* genuine 3-variable constraint, not decomposable into pairs.
+DEGCTY(1) FIELD(5) DEGLEV(4)
+===REGOLE_END===
+
+===LISTE_START===
+* No OR/AND list needed for this subset
+===LISTE_END===
+
+===STRUTT_START===
+* No list structure to generate (no LISTE defined)
+===STRUTT_END===
+
+* =====================================================================
+* Test records (fixed format, 9 characters: ENROLL EDULEV DEGREE DEGLEV
+* DEGCTY FIELD(2) AGE(2))
+* =====================================================================
+* R1:  181410645  -- valid
+* R2:  4      08  -- never-enrolled child (see interaction note above)
+* R3:  162    25  -- valid
+* R4:  45     40  -- violates V1
+* R5:  1723   30  -- violates V3
+* R6:  432110350  -- violates all 5 pairwise rules
+* R7:  2 1220922  -- violates V1 (non-blank form)
+* R8:  192    10  -- violates ONLY rule A
+* R9:  161320711  -- violates ONLY rule B
+* R10: 181410530  -- violates ONLY rule C (degree-3)
+* R11: 492410509  -- violates all 5 pairwise rules AND rules A, B, C

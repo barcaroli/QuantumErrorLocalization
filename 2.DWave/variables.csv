@@ -1,0 +1,8 @@
+name,cost,domain_min,domain_max,blank_allowed,description
+ENROLL,4,1,4,0,school enrollment status
+EDULEV,3,1,9,1,education level
+DEGREE,2,1,2,1,academic degree (yes/no)
+DEGLEV,1,1,8,1,degree level
+DEGCTY,1,1,2,1,degree country
+FIELD,1,0,10,1,field of specialisation
+AGE,5,0,98,0,age in years

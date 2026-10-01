@@ -1,0 +1,3 @@
+cd "C:\Users\UTENTE\Google Drive laptop\Quantum FH\Dirac3"
+venv_dirac\Scripts\activate.bat
+python generate_dirac_report.py --mode cloud

@@ -1,0 +1,6 @@
+# Packages needed by dwave_solver.py
+# (no pins: no venv was present to read versions from; the sibling Dirac3
+#  project ran with dwave-ocean-sdk 7.0.0, numpy 1.26.4, scipy 1.17.1)
+dwave-ocean-sdk
+numpy
+scipy

@@ -1,0 +1,14 @@
+rule_id,variables,operators,conditions,form,regole_line,description
+V1_blank,ENROLL;EDULEV,(;(,4;1-9,blank,1,EDULEV must be blank when ENROLL=4
+V2_blank,ENROLL;DEGREE,(;(,4;1-2,blank,2,DEGREE must be blank when ENROLL=4
+V3_blank,DEGREE;DEGLEV,(;(,2;1-8,blank,3,DEGLEV must be blank when DEGREE=2
+V4_blank,DEGREE;DEGCTY,(;(,2;1-2,blank,4,DEGCTY must be blank when DEGREE=2
+V5_blank,DEGREE;FIELD,(;(,2;00-10,blank,5,FIELD must be blank when DEGREE=2
+V1_nonblank,ENROLL;EDULEV,<;<,4;1-9,nonblank,6,EDULEV must not be blank when ENROLL!=4
+V2_nonblank,ENROLL;DEGREE,<;<,4;1-2,nonblank,7,DEGREE must not be blank when ENROLL!=4
+V3_nonblank,DEGREE;DEGLEV,<;<,2;1-8,nonblank,8,DEGLEV must not be blank when DEGREE!=2
+V4_nonblank,DEGREE;DEGCTY,<;<,2;1-2,nonblank,9,DEGCTY must not be blank when DEGREE!=2
+V5_nonblank,DEGREE;FIELD,<;<,2;00-10,nonblank,10,FIELD must not be blank when DEGREE!=2
+A_incompat,AGE;EDULEV,(;(,"00-14;8,9",incompatibility,11,someone under 15 should not show a higher-education EDULEV code
+B_incompat,AGE;DEGLEV,(;(,00-14;1-8,incompatibility,12,someone under 15 should not have any degree level recorded
+C_incompat,DEGCTY;FIELD;DEGLEV,(;(;(,1;5;4,incompatibility,13,"field-of-specialisation 5 exists only at technical-diploma level in Tunisia (DEGCTY=1); same field+level combo is plausible if obtained abroad -- genuine 3-variable constraint, not decomposable into pairs"

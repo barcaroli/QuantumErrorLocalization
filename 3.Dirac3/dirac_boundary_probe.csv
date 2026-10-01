@@ -1,0 +1,5 @@
+attempted,cost_s,label,m,num_samples,relaxation_schedule,status,wall_clock_s
+True,3,"baseline (sparse, 1 sample, schedule=1)",150,1,1,COMPLETED,10.37
+True,3,"dense (complete graph, 1 sample, schedule=1)",4950,1,1,COMPLETED,13.12
+True,54,"sparse, 20 samples, schedule=1",150,20,1,COMPLETED,68.2
+True,,"sparse, 1 sample, schedule=10",150,1,10,"error: 400 Client Error: Bad Request for url: https://api.qci-prod.com/optimization/v1/jobs with response body: {""message"":""Field job_submission.device_config.dirac-3_qudit.relaxation_schedule is not less than or equal to 4""}",

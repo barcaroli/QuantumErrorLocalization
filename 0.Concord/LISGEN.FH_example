@@ -1,0 +1,85 @@
+List of explicit edits
+edit      1
+   1 ENROLL (4) EDULEV (1-9) 
+edit      2
+   2 ENROLL (4) DEGREE (1-2) 
+edit      3
+   3 DEGREE (2) DEGLEV (1-8) 
+edit      4
+   4 DEGREE (2) DEGCTY (1-2) 
+edit      5
+   5 DEGREE (2) FIELD (0-10) 
+edit      6
+   6 ENROLL (1-3) EDULEV ( ) 
+edit      7
+   7 ENROLL (1-3) DEGREE ( ) 
+edit      8
+   8 DEGREE (1, ) DEGLEV ( ) 
+edit      9
+   9 DEGREE (1, ) DEGCTY ( ) 
+edit     10
+  10 DEGREE (1, ) FIELD ( ) 
+edit     11
+  11 EDULEV (8-9) AGE (0-14) 
+edit     12
+  12 DEGLEV (1-8) AGE (0-14) 
+edit     13
+  13 DEGLEV (4) DEGCTY (1) FIELD (5) 
+List of implicit edits with edits generator
+edit     14
+  14 EDULEV ( ) DEGREE (1-2) 
+gen. var.      1 from edits 6 2  
+edit     15
+  15 EDULEV (1-9) DEGREE ( ) 
+gen. var.      1 from edits 7 1  
+edit     16
+  16 ENROLL (4) DEGLEV ( ) 
+gen. var.      3 from edits 8 2  
+edit     17
+  17 EDULEV ( ) DEGLEV ( ) 
+gen. var.      3 from edits 8 14  
+edit     18
+  18 ENROLL (4) DEGCTY ( ) 
+gen. var.      3 from edits 9 2  
+edit     19
+  19 EDULEV ( ) DEGCTY ( ) 
+gen. var.      3 from edits 9 14  
+edit     20
+  20 ENROLL (4) FIELD ( ) 
+gen. var.      3 from edits 10 2  
+edit     21
+  21 EDULEV ( ) FIELD ( ) 
+gen. var.      3 from edits 10 14  
+edit     22
+  22 DEGLEV ( ) DEGCTY (1-2) 
+gen. var.      3 from edits 8 4  
+edit     23
+  23 DEGLEV ( ) FIELD (0-10) 
+gen. var.      3 from edits 8 5  
+edit     24
+  24 DEGLEV (1-8) DEGCTY ( ) 
+gen. var.      3 from edits 9 3  
+edit     25
+  25 DEGCTY ( ) FIELD (0-10) 
+gen. var.      3 from edits 9 5  
+edit     26
+  26 DEGLEV (1-8) FIELD ( ) 
+gen. var.      3 from edits 10 3  
+edit     27
+  27 DEGCTY (1-2) FIELD ( ) 
+gen. var.      3 from edits 10 4  
+edit     28
+  28 DEGREE (1, ) AGE (0-14) 
+gen. var.      4 from edits 12 8  
+edit     29
+  29 ENROLL (4) AGE (0-14) 
+gen. var.      4 from edits 12 16  
+edit     30
+  30 EDULEV ( ) AGE (0-14) 
+gen. var.      4 from edits 12 17  
+edit     31
+  31 DEGCTY (1-2) AGE (0-14) 
+gen. var.      4 from edits 12 22  
+edit     32
+  32 FIELD (0-10) AGE (0-14) 
+gen. var.      4 from edits 12 23  

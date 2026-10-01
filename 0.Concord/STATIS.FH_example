@@ -1,0 +1,10 @@
+ STATISTICA DELLE VARIABILI IMPUTATE CON EDIT IMPLICATI                         
+ VARIABILI  IMPUTATE   ---------------- EDIT + IMPLICATI  --------------------  
+  nome     volta    %   edit   volte  edit    volte edit    volte  edit    volte
+ ENROLL        2  28.00    0        2    0        0    0        0    0        0
+ EDULEV        4  57.00   17        3   19        3   21        3   30        3
+ DEGREE        3  42.00    8        3    9        3   10        3   28        3
+ DEGLEV        1  14.00    8        1   16        1   17        1    0        0
+ DEGCTY        2  28.00    9        2   18        1   19        1   24        1
+ FIELD         1  14.00   10        1   20        1   21        1    0        0
+ edit 0 = fuori dominio                                                         
